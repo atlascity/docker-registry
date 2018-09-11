@@ -1,0 +1,24 @@
+version: 0.1
+log:
+  fields:
+    service: registry
+storage:
+  cache:
+    blobdescriptor: inmemory
+  filesystem:
+    rootdirectory: /var/lib/registry
+http:
+  addr: :5000
+  headers:
+    X-Content-Type-Options: [nosniff]
+auth:
+  token:
+    realm: http://gitlab.atlas.engr/jwt/auth
+    service: container_registry
+    issuer: gitlab-issuer
+    rootcertbundle: /root/certs/certbundle
+health:
+  storagedriver:
+    enabled: true
+    interval: 10s
+    threshold: 3
