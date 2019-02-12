@@ -6,7 +6,7 @@ docker-compose and systemd scripts for running a private docker registry as a li
 
 ### Git clone to the root directory 
 
-    $ git clone git@gitlab.engr.atlas:devOps/docker-registry.git /docker-registry
+    $ git clone git@github.com:atlascity/docker-registry.git /docker-registry
     
 ### Install the systemd unit file
 
